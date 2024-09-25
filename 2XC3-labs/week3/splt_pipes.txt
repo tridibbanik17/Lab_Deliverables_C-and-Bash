@@ -1,0 +1,11 @@
+cat art_of_war.txt communist_manifesto.txt dracula.txt shakespeare.txt taken_or_left.txt | ./splt | sort | uniq
+
+cat art_of_war.txt communist_manifesto.txt dracula.txt shakespeare.txt taken_or_left.txt | ./splt | sort | uniq | wc -w
+
+cat art_of_war.txt communist_manifesto.txt dracula.txt shakespeare.txt taken_or_left.txt | ./splt | sort | uniq >lexicon.txt
+
+cat art_of_war.txt communist_manifesto.txt dracula.txt shakespeare.txt taken_or_left.txt | ./splt | sort | uniq | head -n 1
+
+cat art_of_war.txt communist_manifesto.txt dracula.txt shakespeare.txt taken_or_left.txt | ./splt | sort | uniq | tail -n 1
+
+cat art_of_war.txt communist_manifesto.txt dracula.txt shakespeare.txt taken_or_left.txt | ./splt | sort | uniq | head -n 9998 | tail -n 1

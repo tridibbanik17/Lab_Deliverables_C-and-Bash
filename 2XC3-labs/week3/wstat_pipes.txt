@@ -1,0 +1,9 @@
+cat los_favores_del_mundo.txt | ./splt | wc | ./splt | head -n 3 | ./wstat
+
+cat los_favores_del_mundo.txt nazarin.txt novelas_cortas.txt que_nada_se_sabe.txt | ./splt | wc | ./splt | head -n 3 | ./wstat
+
+cat los_favores_del_mundo.txt nazarin.txt novelas_cortas.txt que_nada_se_sabe.txt | ./splt | head -n 100 | wc | ./splt | head -n 3 | ./wstat
+
+cat los_favores_del_mundo.txt nazarin.txt novelas_cortas.txt que_nada_se_sabe.txt | ./splt | tail -n 100 | wc | ./splt | head -n 3 | ./wstat
+
+cat los_favores_del_mundo.txt nazarin.txt novelas_cortas.txt que_nada_se_sabe.txt | ./splt | sort | uniq | wc | ./splt | head -n 3 | ./wstat
