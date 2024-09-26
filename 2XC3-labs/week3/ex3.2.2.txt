@@ -1,0 +1,7 @@
+EXERCISE 2: VARIABLES
+
+Answer to the question letter a: The bash script below returns the first argument written during execution. So, if the file name is di and the user provides this file the permission to be executed by using "chmod 755 di" command, then when the user will provide a command i.e., "./di hello", the output will be "hello". In the sscript file, $1 means the first argument. When the user writes "./di hello", "hello" is the first argument and the script file tells the Linux Kernel to show argument 1 as the output. A command that uses it to execute ls -l command would "./di "ls -l"".
+
+
+
+Answer to the question letter b: My guess for what the sequence of commands below send to stdout would be "a 1 a1C 1*10". The answer I get after I run the commands at the command line is also "a 1 a1C 1*10". So, I guessed correctly!

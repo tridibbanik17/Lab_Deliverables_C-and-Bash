@@ -1,0 +1,20 @@
+#!/bin/bash
+if [[ $# -eq 0 ]]
+then
+	echo "Error: You didn't pass argument. You should enter file names or directory names or both separating each by a space." >&2
+	exit 1
+fi
+
+for item in "$@"
+do
+	if [[ -f $item ]]	
+	then 
+		echo "file:      $item"
+	elif [[ -d $item ]]
+	then 
+		echo "directory: $item"
+	else
+		echo "unknown:   $item"
+		exit 0
+	fi
+done

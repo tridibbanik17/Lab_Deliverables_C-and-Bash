@@ -1,0 +1,14 @@
+#!/bin/bash
+if [[ $# -ne 0 ]]
+then 
+	echo "Error: you passed arguments to bashsplit. The correct usage should be just typing out ./bashsplit and then pressing enter." >&2 
+	exit 1
+fi
+
+while read -r line
+do
+	for word in $line
+	do
+		echo "$word"
+	done
+done
