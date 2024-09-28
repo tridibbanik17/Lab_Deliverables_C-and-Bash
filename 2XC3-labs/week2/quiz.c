@@ -1,66 +1,136 @@
+/*Author: Tridib Banik, Student Number: 400514461, MacID: banikt 
+ *This C program knows at least three quiz questions and answers. Users interact with the program through command line flags.
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
-// Define quiz questions and answers
-const char *questions[] = {
-    "What command would you use to edit a file named 'hello' on Linux shell?",
-    "What function would you use to print a statement on C?",
-    "What flag would you use to commit a message to a repository on GitHub?"
-};
-
-const char *answers[] = {
-    "vi hello",
-    "puts",
-    "-m"
-};
-
-// Function to print usage information
-void print_usage() {
-    printf("Usage: quiz [-#] [<answer>]\n");
-    printf("Try 'quiz --help' for more information.\n");
+//print_usage() function to print out usage instructions.
+void print_usage() 
+{
+    printf("Usage: ./quiz [-#] [<answer>]\n");
+    printf("Try './quiz --help' for more information.\n");
 }
 
-int main(int argc, char *argv[]) {
-    int question_number = -1;
-    char *answer = NULL;
+//print_help() function provides detailed information about how to use different commands.
+void print_help() 
+{
+    printf("quiz: A simple Linux command line utility that knows at least three quiz questions and answers.\n");
+    printf("Usage:\n");
+    printf("  ./quiz -1                # Question about Linux\n");
+    printf("  ./quiz -2                # Question about C\n");
+    printf("  ./quiz -3                # Question about Git\n");
+    printf("  ./quiz -1 \"my answer\"  # Provide answer to question 1\n");
+    printf("  ./quiz --help            # Show help information\n");
+}
 
-    // Parse command line arguments
-    if (argc > 1) {
-        if (argv[1][0] == '-') {
-            question_number = atoi(argv[1] + 1);
-            if (question_number < 1 || question_number > 3) {
-                printf("Invalid question number.\n");
-                print_usage();
-                return EXIT_FAILURE;
-            }
-        } else {
-            answer = argv[1];
-        }
+//argc parament is an integer that counts the number of arguments passed to the command line and *argv[] is a string type that can access different arguments passed to the command line.
+int main(int argc, char *argv[]) 
+{
+    //if the user only writes ./quiz or any other one word command.
+    if (argc == 1) 
+    {
+        print_usage();
+        return EXIT_FAILURE;
     }
 
-    // Handle help flag
-    if (argc == 2 && strcmp(argv[1], "--help") == 0) {
-        printf("Quiz utility\n");
-        printf("Usage: quiz [-#] [<answer>]\n");
-        printf("  -#: Specify the question number (1-3)\n");
-        printf("  <answer>: Provide your answer to the question\n");
+    //Handle the --help flag
+    if (strcmp(argv[1], "--help") == 0) 
+    {
+        print_help();
         return EXIT_SUCCESS;
     }
 
-    // Display the question based on the question number
-    if (question_number != -1) {
-        printf("%d\n", question_number);
-        printf("%s\n", questions[question_number - 1]);
+    //Handle inva-bad flag
+    if (argv[1] == "-bad") 
+    {
+        print_usage();
+        return EXIT_FAILURE;
     }
 
-    // Check if an answer is provided
-    if (answer != NULL) {
-        if (question_number == -1 || strcmp(answer, answers[question_number - 1]) == 0) {
-            printf("Correct!\n");
-        } else {
-            printf("Incorrect. The correct answer is: %s\n", answers[question_number - 1]);
+    // Question 1: Linux
+    if (strcmp(argv[1], "-1") == 0) 
+    {
+        if (argc == 2) 
+        {
+            // Display question 1
+            printf("What command would you use to edit a file named 'hello' on the Linux shell?\n");
+        } 
+        else if (argc == 3) 
+        {
+            // Check answer to question 1
+            if (strcmp(argv[2], "vi") == 0) 
+            {
+                printf("The answer is correct.\n");
+            } 
+            else 
+            {
+                printf("The answer is incorrect.\n");
+            }
+        } 
+        else 
+        {
+            print_usage();
+            return EXIT_FAILURE;
         }
+    }
+    // Question 2: C
+    else if (strcmp(argv[1], "-2") == 0) 
+    {
+        if (argc == 2) 
+        {
+            // Display question 2
+            printf("What function would you use to print a statement in C?\n");
+        } 
+        else if (argc == 3) 
+        {
+            // Check answer to question 2
+            if (strcmp(argv[2], "printf") == 0 || strcmp(argv[2], "puts") == 0) 
+            {
+                printf("The answer is correct.\n");
+            } else 
+            {
+                printf("The answer is incorrect.\n");
+            }
+        } 
+        else 
+        {
+            print_usage();
+            return EXIT_FAILURE;
+        }
+    }
+    // Question 3: Git
+    else if (strcmp(argv[1], "-3") == 0) 
+    {
+        if (argc == 2) 
+        {
+            // Display question 3
+            printf("What flag would you use to commit a message to a repository in Git?\n");
+        } 
+        else if (argc == 3) 
+        {
+            // Check answer to question 3
+            if (strcmp(argv[2], "-m") == 0) 
+            {
+                printf("The answer is correct.\n");
+            } 
+            else 
+            {
+                printf("The answer is incorrect.\n");
+            }
+        } 
+        else 
+        {
+            print_usage();
+            return EXIT_FAILURE;
+        }
+    }
+    //Handle invalid flag
+    else 
+    {
+        print_usage();
+        return EXIT_FAILURE;
     }
 
     return EXIT_SUCCESS;
