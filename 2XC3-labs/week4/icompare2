@@ -1,0 +1,33 @@
+#!/bin/bash
+
+#Author: Tridib Banik, Student Number: 400514461, MacID: banikt
+#This program finds out valid positive or negative integers consisting of 1 to 9 digits and double them.
+ 
+
+# Function to check if the input is a valid integer
+is_valid_integer() 
+{
+    local token="$1"
+    # Regular expression for a valid integer (1-9 digits, with optional +/- sign, no leading zeros)
+    if [[ $token =~ ^[+-]?[1-9][0-9]{0,8}$|^0$ ]]
+    then
+        return 0  # Valid integer
+    else
+        return 1  # Invalid integer
+    fi
+}
+
+# Read input tokens
+while read -r token 
+do
+    if is_valid_integer "$token"
+    then
+        # If valid, convert to integer and double the value
+        doubled_value=$((token * 2))
+        echo "$doubled_value"
+    else
+        # If invalid, print error to stderr and exit with code 2
+        echo "Error: Invalid integer token '$token'" >&2
+        exit 2
+    fi
+done
