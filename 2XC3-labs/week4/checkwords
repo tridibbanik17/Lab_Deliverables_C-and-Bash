@@ -1,4 +1,4 @@
 #!/bin/bash
 echo "There are $(cat $1 | wc -l) words in $1"
-echo "There are $(cat dict.txt | grep -P "^\w{$2,$7}$" | wc -l) words between $2 and $7 characters long"
+echo "There are $(cat dict.txt | grep -P "^\w{$2,$3}$" | wc -l) words between $2 and $3 characters long"
 
