@@ -1,1 +1,6 @@
-reflect on the use of & to create side-effects
+Reflection on the use of & to create side-effects
+
+Through pointer passing, one function can directly control variables from another code by using the & operator in C, which gives access to a variable's memory address. This has an important side effect in that it establishes an implicit relationship between the two functions since one function can change the state of a variable in another.
+
+One valuable tool in C that can result in effective and modular code is the usage of pointers to generate side effects via the & operator. But simplicity, predictability, and safety suffer as a result. Although directly manipulating external variables can lead to better speed, particularly in contexts with limited resources, it also raises the possibility of errors and makes the code more difficult to comprehend and maintain.
+Therefore, when utilizing this feature, developers need to be cautious. To minimize risks, it's essential to have clear documentation and to carefully examine when and where to enable side effects. Minimizing side effects in high-level designs usually results in cleaner, more maintainable code; yet, pointers are frequently required in C for system-level programming and efficiency.
