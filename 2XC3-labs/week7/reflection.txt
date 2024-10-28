@@ -1,0 +1,9 @@
+The use of pointers vs indices
+
+Pointers point to the memory address of a variable where it is stored. For example, int * a = 10; points to a memory address where it is stored and it has a value of 10. printf("%d", *a); prints the memory address and printf("%d", a); prints the actual value of the variable a.
+
+Indices are the indices of an array in this particular lab. We initialize an array of integers like this: int a[]; If we want to get the index 1 of a, we can just use printf("%d\n", a[1]).
+
+One advantage of processing arrays with pointer arithmetic (* operator) is that it can be slightly more efficient. When using pointer arithmetic, you often avoid the overhead associated with array indexing, especially in loops, because pointer arithmetic directly references the memory location without recalculating the index offset each time. This can lead to more optimized code, particularly in performance-critical applications. 
+
+The main disadvantage of pointer arithmetic is reduced readability and increased complexity. It’s easier to make mistakes, such as accidentally incrementing a pointer beyond the array bounds or misusing pointers, which can lead to undefined behavior and hard-to-debug errors. Unlike array indexing, pointer arithmetic can be less intuitive, especially for people new to C or for anyone revisiting the code later.
