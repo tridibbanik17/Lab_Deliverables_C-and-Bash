@@ -1,0 +1,5 @@
+Comparing C to Python
+
+C offers more control over system resources and memory management through pointers and manual allocation, making it a popular choice for performance-critical applications and low-level hardware. However, it lacks automatic memory management and garbage collection, which Python handles automatically. So, C has a higher risk of memory leaks and accessing invalid memory through pointers, making it more error-prone for beginners or complex programs.
+
+Between the two, I prefer Python due to its simplicity and readability. Python's high-level abstractions let me focus on solving problems quickly without worrying as much about memory management or low-level details, making it ideal for general-purpose programming.
