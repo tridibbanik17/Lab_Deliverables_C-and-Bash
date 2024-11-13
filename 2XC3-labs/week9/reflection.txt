@@ -19,3 +19,24 @@ When deciding whether to use a parameterized macro or replace a function call wi
 On the other hand, replacing function calls with equivalent code ensures type safety and simplifies debugging, as the code is more explicit. This approach can improve readability, making the logic easier to follow. However, it can lead to code duplication, increasing the risk of errors and making maintenance more challenging.
 
 In summary, parameterized macros should be used for performance-critical sections where code reuse is beneficial, but the programmer needs to be cautious of the potential pitfalls. For most cases, replacing function calls with equivalent code is safer and more maintainable, balancing performance with code quality.
+
+
+
+
+Answer to the question number 3
+To determine whether removing function calls or improving the algorithm provided better performance, the programmer can compare the gprof reports for both versions of the code.
+In terms of removing function calls, it can reduce overhead, potentially leading to faster execution times. The gprof report illustrates that the time spent for quickcheck() and checkfactor() functions in primes4.c is 0.00 seconds. But in primes.c, the time spent is 0.00 and 0.50 seconds. If the total execution time decreases, it indicates a performance gain. 
+Next, optimizing the algorithm to check factors only up to the square root of n significantly reduces the number of iterations, leading to a more substantial performance improvement.
+In conclusion, improving the algorithm usually provides a more substantial performance improvement than merely removing function calls. It is because algorithmic optimizations can drastically reduce the computational complexity, whereas removing function calls only eliminates the overhead associated with those calls.
+
+
+
+
+Answer to the question number 4
+Removing function calls might be a good idea under the following circumstances:
+Firstly, in performance-critical sections of code where even small overheads matter, such as in real-time systems or high-frequency trading applications.
+Secondly, in resource-constrained environments like embedded systems, where minimizing overhead is crucial.
+Thirdly, if profiling indicates that function call overhead is a significant bottleneck, removing those calls can be justified.
+Finally, while removing function calls can provide performance benefits, it should be balanced with the need for maintainable and readable code. Algorithmic improvements typically offer more significant gains and should be prioritized.
+
+
