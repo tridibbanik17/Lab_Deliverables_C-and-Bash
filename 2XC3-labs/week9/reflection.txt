@@ -1,0 +1,21 @@
+Answer to the question number 1
+Based on the quantitative evidence from this investigation, removing function calls from a program can lead to performance improvements, but there are trade-offs to consider.
+
+Performance Improvements
+By replacing function calls with macros or direct Boolean comparisons, the programmer is able to eliminate the overhead associated with function calls. This can lead to faster execution times, especially in performance-critical sections of code.
+In addition, macros and inline functions can be expanded directly in the code, which can further optimize performance by reducing the need for jumps in the instruction flow.
+
+The trade-offs
+Functions encapsulate specific behaviors and make the code more modular and easier to understand. Replacing functions with macros or inline code can make the code harder to read and maintain, as the logic is no longer encapsulated and can be scattered throughout the code.
+In terms of program debugging, functions provide clear boundaries for debugging. When using macros, debugging can become more complex because the preprocessor replaces the macros before compilation, making it harder to trace issues.
+Finally, macros do not perform type checking and can lead to subtle bugs if not used carefully. Functions, on the other hand, provide type safety and reduce the risk of such errors.
+
+
+
+
+Answer to the question number 2
+When deciding whether to use a parameterized macro or replace a function call with equivalent code, the trade-offs must be considered. Parameterized macros can improve performance by eliminating function call overhead and allowing code reuse. However, they lack type safety and can make debugging difficult due to preprocessor expansion. Macros can also reduce code readability, especially for those unfamiliar with the macro definitions.
+
+On the other hand, replacing function calls with equivalent code ensures type safety and simplifies debugging, as the code is more explicit. This approach can improve readability, making the logic easier to follow. However, it can lead to code duplication, increasing the risk of errors and making maintenance more challenging.
+
+In summary, parameterized macros should be used for performance-critical sections where code reuse is beneficial, but the programmer needs to be cautious of the potential pitfalls. For most cases, replacing function calls with equivalent code is safer and more maintainable, balancing performance with code quality.
