@@ -1,5 +1,6 @@
 #include <stdio.h>
-#include <string.h> // For strlen
+#include <string.h>
+#include <stdlib.h>
 #include "string_utilities.h"
 
 #define INPUT_SIZE 1024
@@ -14,14 +15,29 @@ int main() {
             input[len - 1] = '\0';
         }
 
+        // Trim the input
+        trim(input);
+        printf("Trimmed: '%s'\n", input);
+
         // Skip empty lines
         if (input[0] == '\0') {
             continue;
         }
 
-        to_upper(input); // Convert input to uppercase
-        printf("%s\n", input); // Print the converted string
+        // Convert to uppercase and print
+        to_upper(input);
+        printf("Uppercase: %s\n", input);
+
+        // Convert to lowercase and print
+        char *lowercase = to_lower_pure(input);
+        if (lowercase != NULL) {
+            printf("Lowercase: %s\n", lowercase);
+            free(lowercase); // Deallocate memory for lowercase string
+        } else {
+            fprintf(stderr, "Memory allocation failed for lowercase conversion.\n");
+        }
     }
 
     return 0;
 }
+
