@@ -1,3 +1,5 @@
+### Author: Tridib Banik, McMaster University, Software Engineering Level II.
+
 ### This repository contains all the lab deliverables from the SFWRENG 2XC3: Development Basics course instructed by Dr. Sam Scott. 
 
 #### Week1 folder contains a Bash script to navigate to the target directory, remove all files with the .tmp file extension and return to the previous directory, two C files such as printing out to standard output and a makefile to compile C files.
