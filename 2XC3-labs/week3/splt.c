@@ -1,4 +1,4 @@
-/*Author: Tridib Banik, Student Number: 400514461, MacID: banikt
+/*Author: Tridib Banik, McMaster University, Software Engineering Level II.
  *This C program reas strings one at a time from stdin and writes them to stdout, one string in each line.
  */
 
