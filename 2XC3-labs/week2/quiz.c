@@ -1,4 +1,4 @@
-/*Author: Tridib Banik, Student Number: 400514461, MacID: banikt 
+/*Author: Tridib Banik, McMaster University, Software Engineering Level II.
  *This C program knows at least three quiz questions and answers. Users interact with the program through command line flags.
  */
 
