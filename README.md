@@ -18,7 +18,7 @@
 
 #### Week9 folder contains four C exercises on preprocessor outputs, measuring performance, program optimization by removing function calls, and optimization algorithmically.
 
-#### Week10 folder contains four C exercises on string processing such as converting a string to upper case, conversion to lower case with no side effects, and trimming trailing whitespace.
+#### Week10 folder contains four C exercises on string processing such as converting a string to upper case, conversion to lower case with no side effects, and trimming leading and trailing whitespace.
 
 #### Week11 folder contains three C exercises on linked lists such as counting items in a list, appending a new node to the end of a list, and reversing a list.
 
