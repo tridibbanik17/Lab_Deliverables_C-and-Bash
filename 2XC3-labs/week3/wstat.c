@@ -1,4 +1,6 @@
-/*Author: Tridib Banik, Student Number: 400514461, MacID: banikt       *This C program reads the output from the wc command as doubles, computes the average line length and prints it to stdout rounded to 1 decimal place.*/
+/*Author: Tridib Banik, McMaster University, Software Engineering Level II.
+*This C program reads the output from the wc command as doubles, computes the average line length and prints it to stdout rounded to 1 decimal place.
+*/
 
 #include <stdio.h>
 #include <stdlib.h>
