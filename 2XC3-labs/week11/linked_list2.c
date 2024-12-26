@@ -1,7 +1,4 @@
-/* Some linked list examples. See textbook 18.5 for more code.
- *
- * Sam Scott, McMaster University, 2024
- */
+// Some linked list examples. See textbook 18.5 for more code.
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
