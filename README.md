@@ -1,24 +1,108 @@
-### Author: Tridib Banik, McMaster University, Software Engineering Level II.
+<div align="center">
 
-### This repository contains all the lab deliverables from the SFWRENG 2XC3: Development Basics course instructed by Dr. Sam Scott. 
+<h3 align="center">SFWRENG 2XC3 Lab Deliverables</h3>
 
-#### Week1 folder contains a Bash script to navigate to the target directory, remove all files with the .tmp file extension and return to the previous directory, two C files such as printing out to standard output and a makefile to compile C files.
+  <p align="center">
+    Lab deliverables for SFWRENG 2XC3: Development Basics at McMaster University
+    <br />
+     <a href="https://github.com/tridibbanik17/lab_deliverables_c-and-bash">github.com/tridibbanik17/lab_deliverables_c-and-bash</a>
+  </p>
+</div>
 
-#### Week2 folder contains two C files such as a C program that knows at least three quiz questions and answers and users interact with the program through command line flags, and a C program that reads the command line and prints out the last argument input by the user.
+## Table of Contents
 
-#### Week3 folder contains C exercises on stdout and stdin in C such as reading strings one at a time from stdin and writing them to stdout (one string per line). The folder also contains Bash scripts and text files with Linux commands on Linux pipes and filters.
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#key-features">Key Features</a></li>
+      </ul>
+    </li>
+    <li><a href="#architecture">Architecture</a></li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#acknowledgments">Acknowledgments</a></li>
+  </ol>
+</details>
 
-#### Week4 folder contains 3 Bash scripts that use Bash regular expressions to split words delimited by whitespace from stdin, and doubling integers from the stdin entered one at a time and 2 text files with some basic regex exercise solutions.
+## About The Project
 
-#### Week5 folder contains 3 C exercises on the syntactic structures in C such as using a for loop to print a nicely formatted calendar to standard out, using a do-while loop to get dates from the user, and using a switch statement to output the date (input by the user) with the name of the month.
+This repository contains the lab deliverables for SFWRENG 2XC3: Development Basics, a course at McMaster University instructed by Dr. Sam Scott. The labs cover fundamental concepts in C programming and Bash scripting. The deliverables are organized by week, with each week focusing on a specific set of skills and concepts.
 
-#### Week6 folder contains 4 C exercises on C program structures such as function prototypes with pointers, refactoring (small transformations to restructure code without changing any program behaviour) and its implementation, and code coverage (using gcov). The folder also contains a C exercise on recursion (using a base case and a recursive case to compute a hailstone sequence).
+### Key Features
 
-#### Week7 folder contains four C exercises on arrays and pointers in C such as searching for an item (key) in an array by index, searching for an item (key) in an array by pointer, counting the number of occurrences of an item (key) in an array, and counting the number of occurrences of an item (key) in a 2D array.
+- **C Programming Exercises:** Includes exercises on C syntax, program structure, arrays, pointers, string processing, and linked lists.
+- **Bash Scripting Exercises:** Includes exercises on Bash scripting, regular expressions, and Linux commands.
+- **Makefile Usage:** Demonstrates the use of Makefiles for compiling C programs.
+- **Code Coverage:** Demonstrates the use of `gcov` for code coverage analysis.
+- **Program Optimization:** Explores techniques for program optimization, such as removing function calls and algorithmic optimization.
 
-#### Week9 folder contains four C exercises on preprocessor outputs, measuring performance, program optimization by removing function calls, and optimization algorithmically.
+## Architecture
 
-#### Week10 folder contains four C exercises on string processing such as converting a string to upper case, conversion to lower case with no side effects, and trimming leading and trailing whitespace.
+The repository is structured into weekly lab directories, each containing C source files, Bash scripts, Makefiles, and text files.
 
-#### Week11 folder contains three C exercises on linked lists such as counting items in a list, appending a new node to the end of a list, and reversing a list.
+- **C Source Files:** Implement various algorithms and data structures.
+- **Bash Scripts:** Automate tasks, manipulate text, and perform system operations.
+- **Makefiles:** Simplify the compilation process for C programs.
+- **Text Files:** Contain data, instructions, or results for the exercises.
+
+The main technologies used are:
+
+- **C:** A general-purpose programming language used for implementing algorithms and data structures.
+- **Bash:** A command-line interpreter used for scripting and automation.
+- **Make:** A build automation tool used for managing the compilation process.
+
+## Getting Started
+
+To run the code in this repository, you will need a Linux environment with the following tools installed:
+
+### Prerequisites
+
+- **GCC:** The GNU Compiler Collection for compiling C programs.
+  ```sh
+  sudo apt-get install gcc
+  ```
+- **Make:** A build automation tool.
+  ```sh
+  sudo apt-get install make
+  ```
+- **Bash:** The Bourne Again Shell. Usually pre-installed on Linux systems.
+- **Gcov:** A code coverage analysis tool (optional, for week 6).
+  ```sh
+  sudo apt-get install gcovr
+  ```
+
+### Installation
+
+1.  Clone the repository:
+   ```sh
+   git clone https://github.com/tridibbanik17/lab_deliverables_c-and-bash.git
+   ```
+2.  Navigate to the desired week's directory:
+   ```sh
+   cd tridibbanik17-lab_deliverables_c-and-bash/2XC3-labs/week1
+   ```
+3.  Compile and run the C programs using Make (if applicable):
+   ```sh
+   make
+   ./program_name
+   ```
+4.  Execute Bash scripts:
+   ```sh
+   chmod +x script_name.sh
+   ./script_name.sh
+   ```
+
+## Acknowledgments
+
+- This README was created using [gitreadme.dev](https://gitreadme.dev) — an AI tool that looks at your entire codebase to instantly generate high-quality README files.
+
+
 
