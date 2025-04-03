@@ -34,6 +34,8 @@
 
 ## About The Project
 
+### Author: Tridib Banik, McMaster University, Software Engineering Level II.
+
 This repository contains the lab deliverables for SFWRENG 2XC3: Development Basics, a course at McMaster University instructed by Dr. Sam Scott. The labs cover fundamental concepts in C programming and Bash scripting. The deliverables are organized by week, with each week focusing on a specific set of skills and concepts.
 
 ### Key Features
@@ -53,11 +55,18 @@ The repository is structured into weekly lab directories, each containing C sour
 - **Makefiles:** Simplify the compilation process for C programs.
 - **Text Files:** Contain data, instructions, or results for the exercises.
 
-The main technologies used are:
+### Weekly Breakdown
 
-- **C:** A general-purpose programming language used for implementing algorithms and data structures.
-- **Bash:** A command-line interpreter used for scripting and automation.
-- **Make:** A build automation tool used for managing the compilation process.
+- **Week 1:** Bash script for directory navigation and cleanup, basic C programs, and a Makefile.
+- **Week 2:** Command-line interactive quiz program and argument processing in C.
+- **Week 3:** Standard input/output handling in C, Linux pipes, and text processing.
+- **Week 4:** Bash scripts using regular expressions and basic regex exercises.
+- **Week 5:** C exercises on loops, date handling, and structured output formatting.
+- **Week 6:** C program structure, pointers, function prototypes, recursion, and code coverage.
+- **Week 7:** Array and pointer manipulation in C, including searching and counting occurrences.
+- **Week 9:** Preprocessor outputs, performance measurement, and optimization techniques.
+- **Week 10:** String processing in C, including case conversion and trimming.
+- **Week 11:** Linked list operations such as counting, appending, and reversing lists.
 
 ## Getting Started
 
@@ -103,6 +112,3 @@ To run the code in this repository, you will need a Linux environment with the f
 ## Acknowledgments
 
 - This README was created using [gitreadme.dev](https://gitreadme.dev) — an AI tool that looks at your entire codebase to instantly generate high-quality README files.
-
-
-
